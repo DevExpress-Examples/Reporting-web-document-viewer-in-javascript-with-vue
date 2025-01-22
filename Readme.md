@@ -4,43 +4,51 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 [![](https://img.shields.io/badge/💬_Leave_Feedback-feecdd?style=flat-square)](#does-this-example-address-your-development-requirementsobjectives)
 <!-- default badges end -->
-# Reporting for Vue - How to Integrate Web Document Viewer
+# Reporting for Vue - Integrate a Web Document Viewer into a Vue App
 
-This example consists of two parts: 
+This example incorporates the Web Document Viewer into a client-side app built with Vue. The example consists of two parts:
 
-- A server (back-end) ASP.NET Core project that enables [cross-domain requests (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) (Access-Control-Allow-Origin) and implements a custom web report storage.
+- The [ServerSideApp](ServerSideApp) folder contains the backend project. The project is an ASP.NET Core application that enables [cross-domain requests (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) (Access-Control-Allow-Origin) and implements custom web report storage.
 
-- An Vue JavaScript Framework front-end client application.
+- The [vue-document-viewer](vue-document-viewer) folder contains the client application built with Vue.
 
-Perform the following steps to run this example:
+## Quick Start
 
-1. Open the back-end project solution (*ServerSide/ServerSide.sln*) in Visual Studio and run the project.
-2. Navigate to the *vue-report-viewer* folder that is the client part's root folder.
-3. Open the console and run the following command:
+### Server
 
-    ```npm install```
-4. Run the command to compile and start the client part:
+In the *ServerSideApp* folder, run the following command:
 
-    ```npm run serve```
+```
+dotnet run
+```
 
-5. Point your browser to `http://localhost:8080/` to see the result.
+The server starts at http://localhost:5000. To debug the server, run the application in Visual Studio.
 
-> [!TIP]
-> Make sure that the backend application runs on the port specified in the host setting of the Document Viewer component. For more information, refer to the following help topic: [Determine the Host URL](https://docs.devexpress.com/XtraReports/400197/web-reporting/asp-net-core-reporting/server-side-configuration/document-viewer-server-side-configuration-asp-net-core#step-3-determine-the-host-url).
+### Client
 
-![](Images/screenshot.png)
+In the *vue-document-viewer* folder, run the following commands:
+
+```
+npm install
+npm run serve
+```
+
+Open your browser (http://localhost:8080/) to see the result. The application displays the Web Document Viewer.
+
+![Web Document Viewer](Images/screenshot.png)
 
 ## Files to Review
 
-- [WebDocumentViewer.vue](vue-report-viewer/src/components/WebDocumentViewer.vue)
+- [Viewer.vue](vue-docuemnt-viewer/src/components/Viewer.vue)
 - [main.js](vue-report-viewer/src/main.js)
-- [HomeController.cs](ServerSideApp/ServerSideApp/Controllers/HomeController.cs)
-- [CustomReportStorageWebExtension.cs](ServerSideApp/ServerSideApp/Services/CustomReportStorageWebExtension.cs)
-- [Program.cs](ServerSideApp/ServerSideApp/Program.cs)
+- [HomeController.cs](ServerSideApp/Controllers/HomeController.cs)
+- [CustomReportStorageWebExtension.cs](ServerSideApp/Services/CustomReportStorageWebExtension.cs)
+- [Program.cs](ServerSideApp/Program.cs)
 
 ## Documentation
 
 - [Document Viewer Integration in Vue](https://docs.devexpress.com/XtraReports/401539)
+
 <!-- feedback -->
 ## Does this example address your development requirements/objectives?
 
