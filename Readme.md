@@ -39,8 +39,8 @@ Open your browser (http://localhost:8080/) to see the result. The application di
 
 ## Files to Review
 
-- [Viewer.vue](vue-docuemnt-viewer/src/components/Viewer.vue)
-- [main.js](vue-report-viewer/src/main.js)
+- [Viewer.vue](vue-document-viewer/src/components/Viewer.vue)
+- [main.js](vue-document-viewer/src/main.js)
 - [HomeController.cs](ServerSideApp/Controllers/HomeController.cs)
 - [CustomReportStorageWebExtension.cs](ServerSideApp/Services/CustomReportStorageWebExtension.cs)
 - [Program.cs](ServerSideApp/Program.cs)
