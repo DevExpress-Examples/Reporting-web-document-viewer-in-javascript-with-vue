@@ -30,16 +30,16 @@ In the *vue-document-viewer* folder, run the following commands:
 
 ```
 npm install
-npm run serve
+npm run dev
 ```
 
-Open your browser (http://localhost:8080/) to see the result. The application displays the Web Document Viewer.
+Open your browser and navigate to the URL specified in the command output to see the result.The application displays the Web Document Viewer.
 
 ![Web Document Viewer](Images/screenshot.png)
 
 ## Files to Review
 
-- [Viewer.vue](vue-document-viewer/src/components/Viewer.vue)
+- [App.vue](vue-document-viewer/src/App.vue)
 - [main.js](vue-document-viewer/src/main.js)
 - [HomeController.cs](ServerSideApp/Controllers/HomeController.cs)
 - [CustomReportStorageWebExtension.cs](ServerSideApp/Services/CustomReportStorageWebExtension.cs)
